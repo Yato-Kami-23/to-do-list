@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>To-Do List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <div class="logo"></div>
+                <h1>To-Do</h1>
+            </div>
+            <div class="rightHead">
+                <div id="today"></div>
+                <div id="theme" class="theme" aria-label="Toggle theme">
+                    <div class="knob"></div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="controls">
+                <input id="taskInput" class="input" placeholder="Add a task and press Enter">
+                <input id="dateInput" type="date" class="input">
+                <select id="priority">
+                    <option value="normal">Priority: Normal</option>
+                    <option value="high">Priority: High</option>
+                    <option value="low">Priority: Low</option>
+                </select>
+                <button id="addBtn">Add</button>
+            </div>
+
+            <div class="tools">
+                <div class="tool" data-filter="all" data-active="true">All</div>
+                <div class="tool" data-filter="active">Active</div>
+                <div class="tool" data-filter="completed">Completed</div>
+                <div class="search" style="min-width:200px"><input id="search" class="input" placeholder="Search"><button id="clearCompleted">Clear Completed</button></div>
+            </div>
+            <div id="list" class="list"></div>
+        </div>
+        <div class="footer">
+            <div class="stats"><span id="count">0</span> items left</div>
+            <div class="stats" id="tip">Double-click a task to edit • Drag to reorder</div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
